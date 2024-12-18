@@ -33,7 +33,7 @@ assist <- function(data, chat = NULL) {
   prompt <- glue::glue(prompt_template)
 
   if (is.null(chat)) {
-    chat <- elmer::chat_openai(
+    chat <- elmer::chat_gemini(
       system_prompt = prompt,
       api_args = list(temperature = 0),
     )
